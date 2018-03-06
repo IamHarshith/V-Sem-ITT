@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q3</title>
+	<meta charset="utf-8"/>
+</head>
+<body>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	#cover{
+		z-index: 4;
+		width: 390px;
+		height: 150px;
+		position: fixed;
+		background-color: black;
+		backface-visibility: hidden;
+		opacity: 0.7;
+	}
+	#outer{
+		z-index: 3;
+		background-color: green;
+position: fixed;
+height: 500px;
+width: 400px;
+	}
+	#inner2{
+		z-index: 2;
+		background-color: yellow;
+position: fixed;
+height: 500px;
+width: 430px;
+	}
+	#inner{
+		z-index: 1;
+		background-color: gray;
+position: fixed;
+height: 500px;
+width: 500px;
+	}
+	p{
+		position: fixed;
+		font-size: 30px;
+	}
+	#btn{
+		width: 100px;
+		height: 50px;
+		position: absolute;
+		left: 300px;
+		top:500px;
+		background-color: yellow;
+		z-index: 99;
+	}
+</style>
+<p id="outer" onmouseover="fun(out,3)" onmouseout="fun1(out,3)">This is a paragraph of outer text super credential hover over to see the magic ....bam!!!!</p>
+	
+	<p id="inner2" onmouseover="fun(in2,1)" onmouseout="fun1(in2,1)">This is a paragraph of inner2 text paragraph middle pagraph is sandwiched between two paragraph now this is not a secret anymore..ha ha ha</p>
+	
+		<p id="inner" onmouseenter="fun(in1,0)" onmouseout="fun1(in1,0)">This is a paragraph of inner text paragraph z index is nicely demonstrated in this example kudos!!</p>
+	<div id="cover"></div>
+<br><br>
+<button onclick="gotoq4()" id="btn">Q4</button>
+	<script type="text/javascript">
+		var out = document.getElementById('outer');
+		var in2 = document.getElementById('inner2');
+		var in1 = document.getElementById('inner');
+		function fun(idd,index) {
+			idd.style.zIndex = 5;
+		}
+		function fun1(idd,index) {
+			idd.style.zIndex = index;
+		}
+		function gotoq4(){
+			window.location.replace("../Q4/index.html");
+		}
+	</script>
+</body>
+</html>

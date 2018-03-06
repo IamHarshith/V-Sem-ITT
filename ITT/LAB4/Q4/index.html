@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8"/>
+    <title>Q4</title>
+    </head>
+<body>
+<input type="text" id="text" placeholder="Enter the USN"/>
+   <button onclick="calc();">Validate</button><br><br>
+   <input type="text" id="sem" placeholder="Enter the sem"/>
+    <button onclick="calc2();">Validate</button>
+    <br><br>
+    <button onclick="gotoq5()">Q5</button>
+    <script>
+		function calc(){
+    var ele = document.getElementById("text").value;
+			if(ele != ""){
+				if(ele.length<10){
+					alert("Legth is smaller than expected");
+				}
+				else if(ele.length>10){
+					alert("Legth is Grater than expected");
+				}
+				else if(ele.length==10){
+		var exp = /^[1-4]{1}[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{3}$/;
+	if(exp.test(ele)){
+		alert("Congrats!!");
+	}	
+		else{
+			alert("Wrong Format");
+		}
+		}
+			}
+		else{
+			alert("Enter the USN");
+		}
+				}
+			
+		function calc2(){
+    var ele = document.getElementById("sem").value;
+			if(ele != ""){
+				
+		var exp = /^[1-8]{1}[ ]?[A-Za-z]{3,10}$/;
+	if(exp.test(ele)){
+		alert("Congrats!!");
+	}	
+		else{
+			alert("Wrong Format");
+		}
+		}
+						
+		else{
+			alert("Enter the USN");
+		}
+			}
+		function gotoq5(){
+			window.location.replace("../Q5/index.html");
+		}
+	</script>
+    </body>
+</html>

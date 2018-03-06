@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Q2</title>
+</head>
+
+<body>
+	<script>
+		var pos = -1;
+		var j=0;
+		var res=Array();
+		var c = prompt("Enter choice:\n0.Exit\n1.Position of left most vowel\n2.Number in reverse order\n3.Q3");
+		if (c == 0) {
+			alert("Exiting..");
+			//window.close();
+		}
+		else if (c == 1) {
+			var choice = prompt("Enter String:");
+			var arr1 = Array(choice.indexOf('a'), choice.indexOf('e'), choice.indexOf('i'), choice.indexOf('o'), choice.indexOf('u'), choice.indexOf('A'), choice.indexOf('E'), choice.indexOf('I'), choice.indexOf('O'), choice.indexOf('U'));
+			res = arr1.sort();
+			for(var i=0;i<res.length;i++)
+				{
+					if(res[i]==-1){
+						j++;
+					}
+					else {
+						alert("(zero based)First Index Of Vowel is "+(res[i]));
+						break;
+					}
+					}
+			if(j==10){
+				alert("No Vowel Found!");
+			}
+		}
+		else if (c == 2) {
+			var num = parseInt(prompt("Enter the number"));
+			var n = num;
+			var rev = 0;
+			while (n > 0) {
+				rem = rev * 10;
+				rev = n % 10 + rem;
+				n = parseInt(n / 10);
+			}
+			alert("Reverse of number is:\n" + rev);
+		}else if(c==3) {
+			
+			window.location.replace("../Q3/index.html");
+			
+		}
+		else{
+			alert("Enter a valid number");
+			window.location.reload();
+		}
+	</script>
+</body>
+
+</html>

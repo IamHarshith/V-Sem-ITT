@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Q1</title>
+</head>
+
+<body>
+	<script>
+		var arr = Array();
+		arr[0] = 0;
+		arr[1] = 1;
+		var a = 0
+			, b = 1;
+		var c = parseInt(prompt("Enter choice:\n0.-Exit\n1.-Fibonacci number\n2.-Table\n3.Q2"));
+		if (c == 1) {
+			var n = parseInt(prompt("Enter the number:"));
+			document.write("<center>");
+			document.write("Fibonacci series:\n");
+			for (var i = 0; i < n; i++) {
+				temp = a + b;
+				arr[i+2]=temp;
+				a = b;
+				b = temp;
+				
+				document.writeln(arr[i]);
+			}
+			document.write("</center>");
+		}
+		else if (c == 2) {
+			var n = parseInt(prompt("Enter the number:"));
+			for (var i = 1; i <= n; i++) {
+				for (var j = 1; j <= 20; j++) {
+					document.write(i+ " * "  +j+" = " +  i*j +" square= "+" " +(i*j)*(i*j));
+					 document.write("<br>");
+					//alert(i + " * " + j + " = " + i * j + " square= " + " " + (i * j) * (i * j));
+				}
+			}
+		}
+		else if (c == 0) {
+			alert("Exiting..");
+			//window.close();
+		}
+		else if(c==3) {
+			
+			window.location.replace("../Q2/index.html");
+			
+		}
+		else{
+			alert("Enter a valid number");
+			window.location.reload();
+		}
+	</script>
+</body>
+
+</html>

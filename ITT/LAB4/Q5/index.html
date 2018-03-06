@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q5</title>
+    <meta charset="UTF-8"/>
+    </head>
+<body>
+    <style>
+        #box{
+			margin-left: 400px;
+			margin-top: 0px;
+			background-color: dodgerblue;
+            width: 500px;
+            height: 150px;
+        }
+		h3{
+			text-align: center;
+		}
+        input{
+			margin: 30px 0px;
+			margin-left: 50px;
+            width: 100px;
+        }
+		button{
+			margin-left: 215px;
+		}
+        #t3{
+            width: 60px;
+        }
+    </style>
+      <p>Possible Operations<br>
+           <ul>
+           	<li>Addition</li>
+           	<li>Subtraction</li>
+           	<li>Multiplication</li>
+           	<li>Division</li>
+           	<li>Power</li>
+           	<li>Modulus</li>
+           </ul>
+           </p>
+    <div id="box">
+    <h3>Calculator</h3>
+         
+            <form>
+<input type="tel" id="t1" placeholder="Number 1" required />
+            <input type="text" id="t3" placeholder="Operation" required/>
+    <input type="tel" id="t2" placeholder="Number 2" required/>
+
+            <button onclick="cal()">Submit</button>
+            </form>
+        </div>
+    <br><br>
+          <button onclick="gotoa1()">A1</button>
+           <script>
+               function cal(){
+               var a = document.getElementById("t1").value;
+               var b = document.getElementById("t2").value;
+               var c = document.getElementById("t3").value;
+if(a == "" | b == "" | c== ""){
+             alert("Enter all field");
+                   }
+                   
+               else{
+                    switch(c){
+                   case '+' :
+                   alert(parseInt(a)+parseInt(b));
+                   break;
+                   case '-' :
+                    alert(a-b);
+                   break;
+                   case '*' :
+                    alert(a*b);
+                   break;
+                   case '/' :
+                    alert(a/b);
+                   break;
+					case '^':
+						alert(Math.pow(a,b));
+						break;
+						case '%':
+							alert((a%b));
+							break;
+                   default :
+                   alert("Invalid Opration");
+               }
+               }
+                   }
+function gotoa1(){
+	window.location.replace("../A1/index.html");
+}
+	</script>
+    </body>
+</html>
