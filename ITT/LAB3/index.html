@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>Combination</title>
+</head>
+<body>
+	<textarea id="text" cols="60" rows="20"></textarea>
+	
+	<script type="text/javascript">
+		var x=0;
+		var res =Array();
+		var str = prompt("Enter 5 letter word:");
+		for (var i = 0; i < str.length; i++) {
+			for (var j = 0; j < str.length; j++) {
+				for (var k = 0; k < str.length; k++) {
+					if(i!=j && j!=k && k!=i){
+						res[x]=(str.charAt(i) + str.charAt(j) + str.charAt(k));
+					x++;
+					}
+				}
+			}
+		}
+		document.getElementById("text").innerHTML=res.join(" ");
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>Combination</title>
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/></head>
+<body>
+<script>
+	
+</script>
+<style>
+	textarea{
+		color: darkslateblue;
+		font-family: sans-serif;
+		font-size: 25px;
+	    padding: 20px 20px 0px 20px;
+		//word-spacing: 20px;
+		border: none;
+		line-height: 50px;
+		resize: vertical;
+	}
+	h3{
+		color: dodgerblue;
+		font-size: 30px;
+	}
+	#hr{
+		padding-left: 100px;
+		color: blue;
+	}
+	</style>
+<center>
+<h3 id="h3"></h3>
+<hr id="hr"><br><br>
+	<textarea id="text" cols="60" rows="9" resize="none"></textarea>
+	</center>
+	<script type="text/javascript">
+		var xy = document.getElementById("text");
+		var yx = document.getElementById("hr");
+	xy.style.visibility = "hidden";
+		yx.style.visibility = "hidden";
+		var x=0;
+		var res =Array();
+		var str = prompt("Enter 5 letter word:");
+		if(str.length==5){
+		for (var i = 0; i < str.length; i++) {
+			for (var j = 0; j < str.length; j++) {
+				for (var k = 0; k < str.length; k++) {
+					if(i!=j && j!=k && k!=i){
+						res[x]=(str.charAt(i) + str.charAt(j) + str.charAt(k));
+					x++;
+					}
+				}
+			}
+		}
+		xy.style.visibility="visible";
+		yx.style.visibility="visible";
+		var s=str.toUpperCase(); 
+		document.getElementById("h3").innerHTML="3 letter Combination of word "+ s+" are:";
+		document.getElementById("text").innerHTML=res.join(" , ");
+		}
+		else{
+			alert("Five Letter word Please F5-try again");
+		}
+	</script>
+</body>
+
+</html>

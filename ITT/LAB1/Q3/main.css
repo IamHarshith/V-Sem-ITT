@@ -1,0 +1,54 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+input,option{
+	color: gray;
+	font-size: 20px;
+	width: 250px;
+	height: 40px;
+}
+#input input{
+	
+	height: 10px;
+	width: 20px;
+}
+p{
+	font-size: 20px;
+	font-family: fantasy;
+	color: darkorange;
+}
+legend{
+	font-size: 50px;
+	font-family: monospace;
+	color: darkslategrey;
+}
+textarea{
+	font-size: 20px;
+	color: blueviolet;
+}
+.btn{
+	height: 50px;
+	color: white;
+	border: none;
+}
+.btn:hover{
+	cursor: pointer;
+	border: 1px solid black;
+}
+.sub{
+	background-color: green;
+}
+.res{
+	background-color: red;
+}
+#bg{
+	z-index: -99;
+	background-color:antiquewhite;
+}
+h4{
+	color:deepskyblue;
+	font-family:fantasy;
+	text-align:justify;
+	margin-left: 100px;
+}

@@ -1,0 +1,31 @@
+*{
+	margin: 0;
+	padding:0; 
+}
+.dept{
+	background-color: gray;
+	border:1px solid black;
+	width: 60%;
+	opacity: 0.6;
+}
+h1{
+	color: firebrick;
+	font-size: 30px;
+	font-family: fantasy;
+}
+button{
+	
+	opacity: 1 ;
+	height: 60px;
+	color: white;
+	background-color: darkgreen;
+	width: 150px;
+	border: none;
+	font-size: 30px;
+	margin-bottom: 50px;
+	font-family: fantasy;
+}
+button:hover{
+	cursor: pointer;
+	background-color: green;
+}

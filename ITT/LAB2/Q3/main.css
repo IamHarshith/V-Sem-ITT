@@ -1,0 +1,28 @@
+ol li{
+	color:white;
+	font-size: 17px;
+}
+#content{
+color: dimgray;
+background-color: antiquewhite;
+	font-size: 25px;
+	padding: 5px 5px;
+	width: 50%;
+	height: 100%;
+}
+#content:hover{
+	box-shadow: 0px 0px 11px 9px lightgray;
+	cursor:default;
+}
+#box{
+	font-family: fantasy;
+	border: 1px dashed red;
+	margin-bottom: 100px;
+	
+}
+#box:hover{
+	cursor:default;
+	border: 5px solid red;
+	padding: 10px 20px 10px 20px;
+	margin:50px 100px 50px 100px; 
+}

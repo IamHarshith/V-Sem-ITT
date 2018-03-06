@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Guess Game</title>
+	<meta charset="UTF-8" /> </head>
+
+<body>
+<style>
+	input {
+			margin-top: 50px;
+			width: 100px;
+			height: 30px;
+			font-size: 25px;
+		text-align: center;
+			color:darkgray;
+		}
+		input:hover{
+			cursor: default;
+		}
+	</style>
+<center>
+<form id="form">
+	<label for="try">Try<input type="tel" id="try" readonly><br><br></label>
+	<label for="num">Number<input type="tel" id="num" readonly></label>
+	<label for="score">Score<input type="tel" id="score" readonly></label>
+</form>
+</center>
+	<script>
+		var f =document.getElementById("form");
+		var tryy = document.getElementById("try");
+		var score =document.getElementById("score");
+		var num = document.getElementById("num");
+		var k = 0,x=0;
+		var guess = parseInt(1 + Math.random() * 14);
+		
+		do{	
+		var g = parseInt(prompt("Guess What I'm guessing(1-15) 0-exit"));
+			k++;
+			if(g>=1 && g<=15){
+				
+		if (guess === g) {
+			
+			alert("Congratulation You got it!!");
+		}
+				else if(g-guess == -1 || g-guess == 1)
+					{
+						alert("Soo Close!");
+					}
+		else if(g>guess ){
+			alert("Hint: Try a smaller number than that");
+		} 
+			else if(g<guess){
+			alert("Hint: Try a bigger number than that");
+		} 
+			}
+			else if(g==0){
+				x =1;
+				break;
+			}else
+				alert("Number is between 1 and 15(including 1 and 15)");
+		}while(g!=guess);
+		if(x==0){
+		tryy.value = k;
+		if(k<=3){
+		score.value = "100" ;
+		}
+		else if(k>4 && k<7)
+			{
+				score.value = "70";
+			}
+		else{
+			score.value = "50";
+		}
+		num.value = guess;
+		}
+		else{
+			f.style.visibility = "hidden";
+			document.writeln ("<center><h1>Thanks for Playing this game</h1><center>");
+		}
+	</script>
+</body>
+
+</html>

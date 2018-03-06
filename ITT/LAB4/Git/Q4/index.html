@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<script>
+			//[1-4][A-Z][A-Z][0-9][0-9][A-Z][A-Z][0-9][0-9][0-9]
+			function onSubmit(){
+				var text = document.getElementById("USN").value;
+				if(text.length >10){
+					alert("USN size too long");
+				}else if(text.length<10){
+					alert("USN size too short");
+				}else{
+					var temp = text.charAt(0);
+					if( temp>='0' && temp<='4'){
+						if((text.charAt(1)>='A' && text.charAt(1)<='Z')&&(text.charAt(2)>='A' && text.charAt(2)<='Z')){
+							if((text.charAt(3)>='0' && text.charAt(3)<='9')&&(text.charAt(4)>='0' && text.charAt(4)<='9')){
+								if((text.charAt(6)>='A' && text.charAt(6)<='Z')&&(text.charAt(5)>='A' && text.charAt(5)<='Z')){
+									if((text.charAt(7)>='0' && text.charAt(7)<='9')&&(text.charAt(8)>='0' && text.charAt(8)<='9')&&(text.charAt(9)>='0' && text.charAt(9)<='9')){
+										alert("Valid USN Syntax");
+									}else{
+										alert("Invalid Format!");
+									}
+								}else{
+									alert("Invalid Format!");
+								}
+							}else{
+								alert("Invalid Format!");
+							}
+						}else{
+							alert("Invalid Format!");
+						}
+					}else{
+						alert("Invalid Format!");
+					}
+				}
+				
+				text = document.getElementById("SEM").value;
+				if(text.length == 1){
+					if(text.charAt(0)>='0' && text.charAt(0)<='9'){
+						alert("Valid sem");
+					}else{
+						alert("Invalid sem");
+					}
+				}else{
+					alert("Invalid sem");
+				}
+			}
+		</script>
+	</head>
+	
+	<body>
+		<input type="text" id="USN" />
+		<br><br>
+		<input type="text" id="SEM" />
+		<br><br>
+		<button onclick="onSubmit()">SUBMIT</button>
+	</body>
+</html>
+
+

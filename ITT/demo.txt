@@ -1,0 +1,8 @@
+line1 says iam happy
+line2 says everyone is happy 
+line3 will be said by someone else
+line4 is empty
+line5 is a secret function v
+this appends in next line
+this appends in next line
+this appends in next line

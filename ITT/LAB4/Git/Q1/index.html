@@ -1,0 +1,32 @@
+<html>
+<head>
+	<meta charset="UTF-8" />
+</head>
+<body>
+	<script type="text/javascript"> 
+		var input1 = prompt("Enter a number : ");
+		input1 = parseInt(input1);
+		var a=0;var b=1;
+		document.write("Fibonacci Series : ");
+		for(var i=1;i<=input1; i++){
+			document.write(a + " ");
+			var temp = a+b;
+			a = b;
+			b = temp;
+		}
+		document.writeln("\n\n");
+		
+		input1 = parseInt(prompt("Enter a number : "));
+		document.writeln('<table border="1">');
+		document.writeln('<th>Number</th>');
+		document.writeln('<th>Square</th>');
+		for(var i=1;i<=input1; i++){
+			document.writeln('<tr>');
+			document.writeln('<td>' + i + '</td>');
+			document.writeln('<td>' + i*i + '</td>');
+			document.writeln('</tr>');
+		}
+		document.writeln('</table>');
+	</script>
+</body>
+</html>

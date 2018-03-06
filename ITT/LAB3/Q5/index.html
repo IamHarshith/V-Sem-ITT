@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8"/>
+		<title>Background</title>
+	</head>
+	<body>
+	<style>
+		ul{
+			text-align: center;
+		}
+		ul li{
+			font-family: fantasy;
+	        padding: 5px 0px;
+			margin-top: 50px;
+			font-size: 20px;
+			list-style: none;
+			display: inline-block;
+			margin-right: 50px;
+			
+		}
+		ul li:hover{
+			cursor: pointer;
+		}
+		#c{
+			color: white;
+			}
+		</style>
+		<ul id="color">
+			<li onmouseover="change('white')">White</li>
+			<li onmouseover="change('black')" >Black</li>
+			<li onmouseover="change('yellow')">Yellow</li>
+			<li onmouseover="change('green')" >Green</li>
+			<li onmouseover="change('blue')" >Blue</li>
+			<li onmouseover="change('orange')" >Orange</li>
+			<li onmouseover="change('brown')" >Brown</li>
+			<li onmouseover="change('violet')" >Violet</li>
+			<li onmouseover="change('gray')" >Gray</li>
+			<li onmouseover="change('red')" >Red</li>
+			<li onmouseover="change('pink')" >Pink</li>
+		</ul>
+		<script>
+			var x =document.getElementById("color");
+		function change(color){
+			//alert(color);
+			if(color =="black"){
+				x.setAttribute("id","c");
+				document.body.style.backgroundColor = color;
+			}
+			else{
+				x.setAttribute("id","");
+			document.body.style.backgroundColor = color;
+			}
+		}
+		</script>
+	</body>
+</html>

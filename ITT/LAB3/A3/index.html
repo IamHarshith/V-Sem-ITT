@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Salespeople commission</title>
+	<meta charset="UTF-8" /> </head>
+
+<body>
+	<script>
+		var x=0,y=0,z=0;
+		var c = parseFloat(9/100);
+		var a1 = 0;
+		var a2 = 0;
+		var a3 = 0;
+		var a4 = 0;
+		var a5 = 0;
+		var a6 = 0;
+		var a7 = 0;
+		var a8 = 0;
+		var invalid = 0;
+		var r=0;
+		do{
+		x =parseInt(prompt("Enter grross sale amount: "+(r+1)+" Exit-0"));
+			r++;
+		y=(x*c)+200;
+			if(y==200){
+				break;
+			}
+		else if(y>=300 && y<=399){
+			a1++;
+		}
+		else if(y>=400 && y<=499){
+			a2++;
+		}
+			else if(y>=500 && y<=599){
+			a3++;
+		}
+			else if(y>=600 && y<=699){
+			a4++;
+		}
+			else if(y>=700 && y<=799){
+			a5++;
+		}
+			else if(y>=800 && y<=899){
+			a6++;
+		}
+			else if(y>=900 && y<=999){
+			a7++;
+		}
+			else if(y>=1000){
+			a8++;
+		}
+			else{
+				invalid++;
+			}
+			
+	}while(x!=0);
+		document.write("<center>Total number of salespeople "+(r-1) +"</center>");
+		
+		document.write("1");document.write("&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;");
+		document.write("$300-$399");document.write("&emsp;&emsp;");
+		document.write(a1);
+		document.write("<br>");
+		document.write("2");document.write("&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;");
+		document.write("$400-$499");document.write("&emsp;&emsp;");
+		document.write(a2);
+		document.write("<br>");
+		document.write("3");document.write("&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;");
+		document.write("$500-$599");document.write("&emsp;&emsp;");
+		document.write(a3);
+		document.write("<br>");
+		document.write("4");document.write("&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;");
+		document.write("$600-$699");document.write("&emsp;&emsp;");
+		document.write(a4);
+		document.write("<br>");
+		document.write("5");document.write("&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;");
+		document.write("$700-$799");document.write("&emsp;&emsp;");
+		document.write(a5);
+		document.write("<br>");
+		document.write("6");document.write("&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;");
+		document.write("$800-$899");document.write("&emsp;&emsp;");
+		document.write(a6);
+		document.write("<br>");
+		document.write("7");document.write("&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;");
+		document.write("$900-$999");document.write("&emsp;&emsp;");
+		document.write(a7);
+		document.write("<br>");
+		document.write("8");document.write("&emsp;&emsp;&emsp;&emsp;");
+		document.write("$1000 and over");document.write("&emsp;&emsp;");
+		document.write(a8);
+		document.write("<br>");
+		document.write("9");document.write("&emsp;&emsp;&emsp;&emsp;&emsp;");
+		document.write("Invalid Cases");document.write("&emsp;&emsp;");
+		document.write(invalid);
+		document.write("<br>");
+		
+		
+	</script>
+</body>
+
+</html>

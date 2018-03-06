@@ -1,0 +1,57 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+input{
+	background: none;
+	border: none;
+	color: green;
+}
+h1,h2{
+	text-align: center;
+}
+body{
+	background-color: #FFFF7F;
+}
+#header{
+	padding: 5px 0px;
+	background-color: lightgreen;
+	height: 40%;
+	width: 100%;
+}
+#survey{
+	padding-left: 40px;
+	margin-top: 50px;
+	height: 50%;
+    margin-left: 40%;
+	font-size: 30px;
+	font-family: sans-serif;
+	width: 16%;
+	background-color:#5e779e;
+}
+h1{
+	color: white;
+	font-size: 30px;
+	font-family: monospace;
+}
+td{
+	
+}
+h2{
+	color: orangered;
+	font-family: fantasy;
+}
+a{
+	margin-left: 40%;
+	text-decoration: none;
+	padding: 10px 78px;
+	color: white;
+	background-color: darkgreen;
+	border: none;
+	font-size: 35px;
+}
+a:hover{
+	cursor: pointer;
+	background-color:forestgreen;
+	color: white;
+}

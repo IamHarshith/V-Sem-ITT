@@ -1,0 +1,75 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+#outer{
+	height: 670px;
+	width: 100%;
+	margin: 0;
+	background-color: blanchedalmond;
+}
+a{
+	text-decoration: none;
+	font-size: 25px;
+	color: white;
+}
+button{
+	font-size: 25px;
+	color: white;
+	position: sticky;
+	text-align: center;
+	width: 150px;
+	height: 60px;
+	border: none;
+	background-color: dodgerblue;
+}
+button:hover{
+	background-color: blue;
+	border: 1px solid wheat;
+	cursor: pointer;
+}
+p{
+	padding:100px 10px 0px 10px;
+	font-size: 25px;
+	color: white;
+	text-align: center;
+}
+div {
+	float :left;
+	margin-top: 100px;
+	margin-left: 250px;
+	margin-right: 10px;
+}
+
+#image {
+	
+	width: 300px;
+	height: 300px;
+	text-align: center;
+	background-color: royalblue;
+}
+#bg {
+	width: 300px;
+	height: 300px;
+	text-align: center;
+	background-color: royalblue;
+}
+#mail{
+	margin-left: 560px;
+	background-color: royalblue;
+	width: 250px;
+	height: 50px;
+	text-align: center;
+	padding-top:10px;
+}
+#m{
+	color: white;
+	text-align: center;
+}
+#mail:hover {
+	cursor: pointer;
+	
+	background-color: dodgerblue;
+}
+

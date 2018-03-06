@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Parking Car</title>
+</head>
+
+<body>
+	<style>
+
+	</style>
+	<script>
+		var ppl = Array();
+		var c = 0
+			, l = -1;
+		var prev = Array();
+		var cost = Array();
+		var hr = Array();
+		var str = parseInt(prompt("Enter the number of Customers"));
+		for (var i = 0; i < str; i++) {
+			ppl[i] = prompt("Enter Customer " + (i + 1) + " Name:");
+			hr[i] = parseInt(prompt("Enter hours parked by Customer: " + (i + 1)));
+			if (hr[i] <= 3) {
+				cost[i] = 2;
+			}
+			else if (hr[i] > 3 && hr[i] < 24) {
+				cost[i] = 2 + ((hr[i] - 3) * (0.5));
+			}
+			else if (hr[i] >= 24) {
+				l++;
+				cost[i] = 2 + ((hr[i] - 3) * (0.5));
+				prev[l] = ppl[i];
+				c++;
+			}
+		}
+		document.write("Customer Name");
+		document.write("&emsp;&emsp;&emsp;");
+		document.write("Hours Parked");
+		document.write("&emsp;&emsp;&emsp;");
+		document.write("Payable Cost in Rs.");
+		document.write("&emsp;&emsp;&emsp;");
+		document.write("<br>");
+		for (i = 0; i < str; i++) {
+			document.write(ppl[i]);
+			document.write("&emsp;&emsp;&emsp;");
+			document.write("&emsp;&emsp;&emsp;");
+			document.write("&emsp;&emsp;&emsp;");
+			document.write(hr[i]);
+			document.write("&emsp;&emsp;&emsp;");
+			document.write("&emsp;&emsp;&emsp;");
+			document.write("&emsp;&emsp;");
+			document.write(cost[i]);
+			document.write("<br>");
+		}
+		document.write("<br>");
+		document.write("<br>");
+		document.write("Customer who have parked the previous day:");
+		document.write("<br>");
+		for (var k = 0; k < c; k++) {
+			document.write(prev[k] + "<br>");
+		}
+	</script>
+</body>
+
+</html>

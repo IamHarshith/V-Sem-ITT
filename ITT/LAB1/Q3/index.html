@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Registration Form</title>
+	<link rel="stylesheet" href="main.css" /> </head>
+
+<body>
+	<div id="bg">
+		<center>
+			<form name="main">
+				<fieldset style="width:700px;height: 1300px;border: 2px solid black;margin-bottom: 10px">
+					<legend align="center">Registration Form</legend>
+					<br>
+					<input type="text" name="name" placeholder="Enter Full Name:" required/>
+					<br>
+					<br>
+					<h4 >Date Of Birth:</h4>
+					<input type="date" name="date" required/>
+					<br>
+					<br>
+					<input type="tel" name="number" placeholder="Enter Phone number:"required />
+					<br>
+					<br>
+					
+					<input type="text" name="state" placeholder="State:" required/>
+					<br>
+					<br>
+					<input type="tel" name="pin" placeholder="PIN Code:" required/>
+					<br>
+					<br>
+					<input type="email" name="email" placeholder="Enter Email:" required/>
+					<br>
+					<br>
+					<div id="input">
+						<p>Gender</p>
+						<br>
+						<input type="radio" name="gender" checked>Male&emsp;&emsp;
+						<input type="radio" name="gender">Female
+						<br>
+						<br>
+						<br>
+						<p>Hobbies</p>
+						<br>
+						<input type="checkbox" name="h1" />Playing games
+						<input type="checkbox" name="h1" />Singing
+						<input type="checkbox" name="h1" />Reading
+						<input type="checkbox" name="h1" />Dancing
+						<input type="checkbox" name="h1" />Gardening
+						<input type="checkbox" name="h1" />Hiking </div>
+					<br>
+					<br>
+					<textarea style="resize: none" cols="40" rows="6">Present Address</textarea>
+					<br>
+					<br>
+					<textarea style="resize: none" cols="40" rows="6">Permanent Address</textarea><br><br>
+					<h4>Applying For</h4>
+				    <select>
+					    <option>-option-</option>
+						<option>B.Tech</option>
+						<option>M.Tech</option>
+					</select>
+					<br>
+					<br>
+					<h4>Upload Image</h4><input type="file" accept=".jpg,.jpeg,.png">
+					<br><br>
+					<input class="btn sub" type="submit" value="Submit" />
+					<input class="btn res" type="reset" value="Reset" /> </fieldset>
+			</form>
+		</center>
+	</div>
+</body>
+
+</html>

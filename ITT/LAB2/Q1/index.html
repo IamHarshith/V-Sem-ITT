@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Image Map</title>
+</head>
+
+<body>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		h1 {
+			color: darkgoldenrod;
+			font-size: 30px;
+			background-color: greenyellow;
+			padding: 5px 5px;
+		}
+		h2{
+			color:dimgray;
+			text-decoration: underline;
+			text-decoration-color:dodgerblue;
+		}
+	</style>
+	<center>
+		<h1>Image Map</h1>
+		<br>
+		<h2>Click On Arrows to visit particular Department</h2>
+		<br><img src="map2.jpg" usemap="#shapes" alt="MIT" />
+		<map name="shapes">
+			<area shape="poly" coords="216,33,236,19,392,37,378,48,388,67,233,50" href="civil.html" />
+			<area shape="poly" coords="214,78,227,94,216,108,375,111,393,97,373,81" href="mech.html" />
+			<area shape="poly" coords="238,166,246,152,355,121,351,134,361,144,254,174" href="biotech.html" />
+			<area shape="poly" coords="245,183,250,197,240,208,343,233,358,222,347,205" href="ec.html" /> </map>
+	</center>
+</body>
+
+</html>

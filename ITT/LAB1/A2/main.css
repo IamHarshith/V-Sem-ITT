@@ -1,0 +1,31 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+tr{
+	text-align: center;
+}
+#table{
+	margin-top: 120px;
+	color:black;
+	height: 400px;
+	width: 500px;
+	background-color: greenyellow;
+	margin-left: 423px;
+	font-size: 20px;
+}
+h1{
+	color: white;
+	background: gray;
+}
+  .x{
+	color: white;
+}
+h2{
+	color:red;
+}
+h3{
+	background-color: forestgreen;
+	color: yellow;
+	font-size: 40px;
+}

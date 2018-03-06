@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Phone Number Test</title>
+		<meta charset="UTF-8"/>
+	</head>
+	<style>
+		input {
+			margin-top: 50px;
+			width: 350px;
+			height: 30px;
+			font-size: 25px;
+			color:deepskyblue;
+		}
+		input:hover{
+			cursor: default;
+		}
+		#clear{
+			cursor: pointer;
+			width: 150px;
+			height: 40px;
+			background-color: firebrick;
+			color: white;
+			font-size: 25px;
+			text-align: center;
+			font-family:cursive;
+		}
+		#clear:hover{
+			background-color: red;
+		}
+		#box{
+			width: 70%;
+			height: 400px;
+			border: 2px solid green;
+		}
+	</style>
+	<center>
+	<div id="box">
+	
+	
+	<label for="num">Phone Number&emsp;&emsp;<input type="tel" id="num" readonly/><br><br></label>
+	
+	<label for="code">Area Code&emsp;&emsp;&emsp;&emsp;<input type="tel" id="code" readonly/><br><br></label>
+	
+	<label for="number">Actual Number&emsp;&emsp;<input type="tel" id="number" readonly/></label>
+	<br><br>
+		<h4 id="clear" onclick="clearr();">Clear</h4>
+	</div>
+	</center>
+	
+	<script>
+	var n=document.getElementById("num");
+		var num = document.getElementById("number");
+		var code= document.getElementById("code");
+		var p =prompt("Enter telephone number in the form (555)  555-5555");
+		if((p.length) === 14)
+			{
+				var  a = p.slice(1,4);
+				var b = p.slice(6,9);
+				var c = p.slice(10,14);
+				n.value = p;
+				num.value = b+c;
+				code.value = a;
+				
+			}
+		else{
+			alert("Please refer to the form given!!");
+			alert("Note there is a space after ')' ");
+		}
+	function clearr(){
+		n.value = "";
+				num.value = "";
+				code.value = "";
+	}
+	</script>
+</html>

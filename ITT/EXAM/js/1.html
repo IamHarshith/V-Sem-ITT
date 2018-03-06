@@ -1,0 +1,22 @@
+<html>
+<body>
+<title>Exam</title>
+</body>
+<script>
+var e = prompt("Enter the word");
+for(var i=0;i<e.length;i++)
+{
+	for(var j=0;j<e.length;j++)
+	{
+		for(var k=0;k<e.length;k++)
+		{
+			if(i!=j && j!=k && k!=i)
+			{
+				document.writeln(e[i]+e[j]+e[k]);
+			}
+		}
+	}
+}
+
+</script>
+</html>

@@ -1,0 +1,34 @@
+<html>
+
+<head>
+	<meta charset="utf-8" /> </head>
+
+<body>
+	<p id="pid">CLick on this para</p>
+	<h1 id="h1pd">H1 element </h1>
+	<h6 id="h6id">H6 element </h6>
+	<h2 id="h2id">H2 element </h2>
+	<h3 id="h3id">H3 element </h3>
+	<h4 id="h4id">H4 element </h4>
+	<p id="op2"></p>
+	<br><br>
+	<button onclick="gotoa3()">A3</button>
+	<script>
+		function operation(e) {
+			alert("It hurts!..");
+			e.target.style.color = "red";
+			if (e.ctrlKey) {
+				alert("Element that triggered " + e.target.tagName + "\nID is-" + e.target.getAttribute("id"));
+			}
+			if (e.shiftKey) {
+				alert("Event name is : " + e.type);
+			}
+		}
+		window.addEventListener("mousedown", operation);
+		function gotoa3(){
+			window.location.replace("../A3/index.html");
+		}
+	</script>
+</body>
+
+</html>

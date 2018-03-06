@@ -1,0 +1,49 @@
+<html>
+<head>
+<script>
+	function lmVowel(string){
+		var found = false;
+		for(var i=0; i<string.length; i++){
+			var c = string.charAt(i);
+			if(isVowel(c.toString().toLowerCase())){
+				document.writeln("The index(zero-based) of the left most vowel is : " + i);
+				found = true;
+				break;
+			}
+		}
+		
+		if(!found){
+			document.writeln("No vowel found");
+		}
+	}
+	
+	function isVowel(c){
+		switch(c){
+			case 'a':
+			case 'e':
+			case 'i':
+			case 'o':
+			case 'u':
+			return true;
+			default:
+			return false;
+		}
+	}
+	
+	function dReverse(num){
+		document.writeln("\n\n");
+		document.writeln("The reverse of " + num + " is ");
+		for(var i=num.length-1; i>=0; i--){
+			document.write(num.charAt(i));
+		}
+	}
+	
+	var string = prompt("Enter a string : ");
+	lmVowel(string);
+	
+	var number = prompt("Enter a number : ");
+	dReverse(number);
+	
+</script>
+</head>
+</html>

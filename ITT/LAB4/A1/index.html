@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>A1</title>
+	</head>
+	<body>
+	<button onclick="gotoa2()">A2</button>
+		<style>
+			h2{
+				color: red;
+				text-align: center;
+				margin-top: 50px;
+			}
+			h2:hover{
+				color: orangered;
+				cursor: default;
+			}
+		</style>
+		<h2 onmouseover="change();" id="h3">Magic Font</h2>
+	<script>
+		var f = document.getElementById("h3");
+		function change(){
+			var mag = (10+Math.random()*20);
+			f.style.fontSize = mag+"px";
+		}
+		function gotoa2(){
+			window.location.replace("../A2/index.html");
+		}
+		</script>
+	</body>
+</html>
