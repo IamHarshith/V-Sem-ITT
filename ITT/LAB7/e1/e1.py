@@ -1,10 +1,11 @@
 import sqlite3
-conn=sqlite3.connect('students.db')
-#conn.execute("CREATE TABLE student (id INT PRIMARY KEY, name VARCHAR);")
-#conn.execute("INSERT INTO student VALUES(1, 'aaa');")
-#conn.execute("INSERT INTO student VALUES(2, 'bbb');")
-#conn.execute("INSERT INTO student VALUES(3, 'ccc');")
-#conn.execute("INSERT INTO student VALUES(4, 'ddd');")
+try:
+	conn=sqlite3.connect('students.db')
+	conn.execute("CREATE TABLE student (id INT PRIMARY KEY, name VARCHAR);")
+	conn.execute("INSERT INTO student VALUES(1, 'aaa');")
+	conn.execute("INSERT INTO student VALUES(2, 'bbb');")
+	conn.execute("INSERT INTO student VALUES(3, 'ccc');")
+	conn.execute("INSERT INTO student VALUES(4, 'ddd');")
 
 stuList=[]
 l=0
