@@ -1,6 +1,7 @@
 import sqlite3
-conn=sqlite3.connect('registration.db')
-#conn.execute("CREATE TABLE data (phno VARCHAR PRIMARY KEY, name VARCHAR);")
+try:
+	conn=sqlite3.connect('registration.db')
+	conn.execute("CREATE TABLE data (phno VARCHAR PRIMARY KEY, name VARCHAR);")
 
 regList=[]
 

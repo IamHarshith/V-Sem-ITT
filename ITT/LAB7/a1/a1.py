@@ -1,12 +1,13 @@
 import sqlite3
 conn=sqlite3.connect('details.db')
 
-# conn.execute("CREATE TABLE details (cid VARCHAR PRIMARY KEY, cname VARCHAR, phno VARCHAR, email VARCHAR);")
-
-# conn.execute("INSERT INTO details VALUES('123', 'Vispi', '9870188858', 'vishtasp.sm@gmail.com')")
-# conn.execute("INSERT INTO details VALUES('124', 'Hamsa', '17635', 'hamsa@gmail.com')")
-# conn.execute("INSERT INTO details VALUES('125', 'AJ', '76534', 'aj@gmail.com')")
-# conn.execute("INSERT INTO details VALUES('126', 'DT', '813265', 'd.t@gmail.com')")
+try:
+    conn.execute("CREATE TABLE details (cid VARCHAR PRIMARY KEY, cname VARCHAR, phno VARCHAR, email VARCHAR);")
+    conn.execute("INSERT INTO details VALUES('123', 'Vispi', '9870188858', 'vishtasp.sm@gmail.com')")
+    conn.execute("INSERT INTO details VALUES('124', 'Hamsa', '17635', 'hamsa@gmail.com')")
+    conn.execute("INSERT INTO details VALUES('125', 'AJ', '76534', 'aj@gmail.com')")
+    conn.execute("INSERT INTO details VALUES('126', 'DT', '813265', 'd.t@gmail.com')")
+    conn.commit()
 
 ph=raw_input("Enter phone number: ")
 em=raw_input("Enter email: ")
@@ -21,7 +22,4 @@ for i in cursor:
 if found==0:
 	print "Please check credentials and try again"
 
-
-
-conn.commit()
 conn.close()
